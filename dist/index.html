@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COMP 318 Messaging System.">
+    <title>COMP 318 M3ssag1n8</title>
+    <link rel="stylesheet" href="/index.0243a6ab.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.6/iconify-icon.min.js"></script>
+    <script defer="" src="/index.b7a05eb9.js"></script>
+  </head>
+
+  <body>
+    <section id="app">
+      <!-- Header Bar -->
+      <header id="header-bar">
+        <section class="header-container">
+          <h1>M3ssag1n8!? ☆</h1>
+        </section>
+      </header>
+
+      <button id="edit-workspace-button">Edit Workspace</button>
+      <!-- <button id="login-button">Login</button> -->
+      <span id="username-display"></span>
+      <!--<button id="workspace-button">Workspace</button>-->
+      <workspace-component></workspace-component>
+
+      <button id="logout-button">Logout</button>
+      <!-- Sidebar Navigation -->
+      <section id="sidebar">
+        <h2>Select a Workspace</h2>
+        <button id="edit-channel-button">Manage Channels</button>
+        <sidebar-component></sidebar-component>
+      </section>
+
+      <!-- Main Content Area -->
+      <section id="main-content">
+        <!-- Header -->
+        <section id="header">☆ PLEASE SELECT A CHANNEL ☆</section>
+        <main-content-component></main-content-component>
+
+        <!-- Chat Container -->
+        <section id="chat-container"></section>
+
+        <!-- Chat Input Area -->
+        <chat-input-component></chat-input-component>
+      </section>
+    </section>
+    <!-- Login template -->
+    <template id="login-component-template">
+      <dialog id="popup-overlay"></dialog>
+      <dialog id="popup">
+        <h2>Login</h2>
+        <form id="login-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required="">
+          <button type="submit">Submit</button>
+        </form>
+      </dialog>
+    </template>
+
+    <!-- Custom Login Component -->
+    <login-component></login-component>
+
+    <edit-workspace-dialog></edit-workspace-dialog>
+    <create-workspace-dialog></create-workspace-dialog>
+    <delete-workspace-dialog></delete-workspace-dialog>
+
+    <edit-channel-button></edit-channel-button>
+    <create-channel-dialog></create-channel-dialog>
+    <delete-channel-dialog></delete-channel-dialog>
+  </body>
+</html>
